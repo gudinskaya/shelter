@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>pets</title>
+  <base href="/gudinskaya-JS2020Q3/shelter/">
+  <link rel="stylesheet" href="./pages/pets/pets.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="logo" onclick="window.location.href='./pages/main/main.html'">
+        <h1 class="logo__first-line">Cozy House</h1>
+        <div class="logo__second-line">Shelter for pets in Boston</div>
+      </div>
+      <nav class="header__menu">
+        <a href="./pages/main/main.html" class="header__menu-link">About the shelter</a>
+        <a href="./pages/pets/pets.html" class="header__menu-link active">Our pets</a>
+        <a class="header__menu-link inactive ">Help the shelter</a>
+        <a class="header__menu-link inactive">Contacts</a>
+      </nav>
+      <div class="header__burger">
+        <button onclick="myFunction(this)" class="header__burger-dropdown">
+          <img src="./assets/Burger.svg" alt="menu" class="burger__img">
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <div class="dropdown__logo-burger-wrapper">
+            <div class="logo" onclick="window.location.href='./pages/main/main.html'">
+              <h1 class="logo__first-line">Cozy House</h1>
+              <div class="logo__second-line">Shelter for pets in Boston</div>
+            </div>
+          </div>
+          <nav class="burger__nav">
+            <div class="link-container" style="width: fit-content;">
+              <a href="./pages/main/main.html" class="header__menu-link burger-link active">About the shelter</a>
+            </div>
+            <div class="link-container" style="width: fit-content;">
+              <a href="./pages/pets/pets.html" class="header__menu-link burger-link ">Our pets</a>
+            </div>
+            <div class="link-container" style="width: fit-content;">
+              <a class="header__menu-link burger-link inactive ">Help the shelter</a>
+            </div>
+            <div class="link-container" style="width: fit-content;">
+              <a class="header__menu-link burger-link inactive">Contacts</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="our-friends__inner">
+    <div class="wrapper">
+      <section class="our-friends">
+        <h3 class="our-friends__title">
+          <span>Our friends who</span>
+          <span>are looking for a house</span>
+        </h3>
+        <div class="items-wrapper" id=slider-wrapper>
+        </div>
+        <div class="modal modal--hidden">
+          <div class="modal__content-wrapper">
+            <div class="modal__close-bar">
+              <img src="./assets/vector.svg" alt="close button">
+            </div>
+            <div class="modal__content">
+              <img class="modal__picture" alt="little pet">
+              <div class="modal__text-container">
+                <div class="modal__name"></div>
+                <div class="modal__pet-type"></div>
+                <div class="modal__description"></div>
+                <ul class="modal__list">
+                  <li class="modal__list-item"><b>Age: </b><span class="age"></span></li>
+                  <li class="modal__list-item"><b>Inoculations: </b><span class="inocul"></span></li>
+                  <li class="modal__list-item"><b>Diseases: </b><span class="diseases"></span></li>
+                  <li class="modal__list-item"><b>Parasites: </b><span class="parasites"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="our-friends__buttons-wrapper">
+          <button class="our-friends__arrow-button" disabled>
+            <<
+          </button>
+          <button class="our-friends__arrow-button" disabled>
+            < 
+          </button>
+          <button class="our-friends__arrow-button">
+            1
+          </button>
+          <button class="our-friends__arrow-button">
+            >
+          </button>
+          <button class="our-friends__arrow-button">
+            >>
+          </button>
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content-wrapper">
+        <div class="footer__item-wrapper">
+          <h3 class="footer__title">
+            <span>For questions</span>
+            <span>and suggestions</span>
+          </h3>
+          <a href="mailto:email@shelter.com?subject = Questions&body = Message"
+            class=" footer__text-wrapper more-margin">
+            <img src="./assets/mail.svg" alt="mail" class="footer__icon-mail">
+            <span class="footer__text">email@shelter.com</span>
+          </a>
+          <a href="tel:+13 674 567 75 54" class="footer__text-wrapper">
+            <img src="./assets/phone.svg" alt="phone" class="footer__icon-phone">
+            <span class="footer__text-phone">+13 674 567 75 54</span>
+          </a>
+        </div>
+        <div class="footer__item-wrapper">
+          <h3 class="footer__title">
+            <span>We are waiting</span>
+            <span>for your visit</span>
+          </h3>
+          <a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"
+            class="footer__text-wrapper" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/pin.svg" alt="pin icon" class="footer__icon-pin">
+            <span class="footer__text_margin">
+              1 Central Street, Boston
+              <br>
+              (entrance from the store)
+            </span>
+          </a>
+          <a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"
+            class="footer__text-wrapper" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/pin.svg" alt="pin icon" class="footer__icon-pin-2">
+            <span class="footer__text">18 South Park, London</span>
+          </a>
+        </div>
+        <img src="./assets/footer-puppy.png" alt="little doggo" class="footer__picture">
+      </div>
+    </div>
+  </footer>
+  <template id="slider-item">
+    <div class="our-friends__slider-item">
+      <img alt="Cute Pet" class="our-friends__picture">
+      <div class="our-friends__picture-title" data-name></div>
+      <button class="our-friends__picture-button" data-petID="{{petID}}">Learn more</button>
+    </div>
+  </template>
+  <script src="./pages/pets/pets.js"></script>
+</body>
+
+</html>
